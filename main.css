@@ -1,0 +1,380 @@
+    
+    .cont-outer
+    {
+        position:absolute;
+        z-index:1;
+        padding:1vw;
+        padding-top:4vw;
+        background: #cecfcf;
+        border-radius: 0.5vw;
+
+    }
+    .cont-inner
+    {
+        position: relative;
+        z-index:1;
+        width:50vw;
+        height:22.5vw;
+        background: #1a1a1a;
+    }
+
+    .conColumn
+    {
+        display: inline-block;
+        width:33.33%;
+        /* outline:2px solid red; */
+        height:100%;
+    }
+
+    .d-pad-wrapper
+    {
+        position: relative;
+        bottom:3vw;
+    }
+
+    .d-hor
+    {
+        position: relative;
+        z-index:3;
+        top:14.5vw;
+        margin:0 auto;
+        width:12vw;
+        height:5vw;
+        background:#1a1a1a;
+        box-shadow:0.5vw 0vw 0.5vw;
+    }
+   
+    .d-ver
+    {
+        position: relative;
+        z-index:3;
+        top:6vw;
+        margin:0 auto;
+        width:5vw;
+        height:12vw;
+        background:#1a1a1a;
+        
+    }
+
+    .d-all
+    {
+       
+        border-radius: 0.5vw;
+    }
+
+    .d-hor-out
+    {
+        position: absolute;
+        border-radius: 0.5vw;
+        z-index:2;
+        top:14vw;
+        left:1.8vw;
+        margin:0 auto;
+        width:13vw;
+        height:6vw;
+        background:#d3d4d5;
+    }
+
+    .d-ver-out
+    {
+        position: absolute;
+        z-index:2;
+        top:10.5vw;
+        border-radius:0.5vw;
+        left:5.27vw;
+        width:6vw;
+        height:13vw;
+        background:#d3d4d5;
+        
+    }
+
+    .d-dent
+    {
+        width:2vw;
+        height:2vw;
+        background:#252525;
+        border-radius: 2vw;
+        position: absolute;
+        z-index:5;
+        left:1.5vw;
+        top:5vw;
+    }
+    .d-arrow
+    {
+        position: relative;
+       width:0.3vw;
+        border-bottom:2vw solid #252525;
+        border-right:2vw solid transparent;
+        border-left:2vw solid transparent;
+       
+    }
+
+    .d-arrow.aOne
+    {
+        left:0.5vw;
+        top:0.5vw;
+    }
+    .d-arrow.aFour
+    {
+        left:0.5vw;
+        top:3.5vw;
+        transform: rotate(180deg);
+    }
+
+    .d-arrow.aTwo
+    {
+        transform:rotate(-90deg);
+        left:-4vw;
+        top:3vw;
+    }
+
+    .d-arrow.aThree
+    {
+        transform:rotate(90deg);
+        left:5vw;
+        top:1vw;
+    }
+    .cntrButtns
+    {
+        position: absolute;
+        margin-top:1.5vw;
+        margin-right:0.5vw;
+        margin-left :0.5vw;
+        display: inline-block;
+        z-index:4;
+        width:5vw;
+        height:2vw;
+        background:#525352;
+        border-radius: 2vw;
+        box-shadow:0.5vw 0vw 0.5vw;
+        /* outline:red; */
+    }
+
+    .startBut
+    {
+        left:8vw;
+    }
+
+    .slctBut
+    {
+        left:0.5vw;
+    }
+
+    .innr-srt-slct
+    {
+        position: relative;
+        margin:0 auto;
+        top:0.75vw;
+        background:#c4c4c5;
+        border-radius: 1vw;
+        height:5vw;
+        width:14.5vw;
+        
+    }
+
+    .out-st-slct
+    {
+        position: absolute;
+        z-index:4;
+        top:14vw;
+        left:16.95vw;
+        background:rgb(219, 217, 217);
+        border-radius: 1vw; 
+        height:6.5vw;
+        width:16vw;
+    }
+
+    .pttrn
+    {
+        width:16.5vw;
+        height:3.65vw;
+        background:#9a9e9a;
+        border-radius:1vw;
+        margin-top:1vw;
+    }
+
+    .ptrnOne
+    {
+        margin-top:0vw;
+    }
+
+    .ptrnFour
+    {
+        margin-top:8.55vw;
+        height:1vw;
+        border-bottom-right-radius: 0vw;
+        border-bottom-left-radius: 0vw;
+       
+    }
+
+    .ptrnOne
+    {
+        border-top-left-radius: 0vw;
+        border-top-right-radius: 0vw;
+    }
+
+    .ptrnThree .cntrLabel
+    {
+        color:red;
+        font-family: "Nintender";
+        font-size: 1.5vw;
+        position: absolute;
+        margin-top:0.9vw;
+       
+    }
+
+    .ptrnThree .lblStrt
+    {
+       left:26.5vw;
+    }
+    .ptrnThree .lblSlct
+    {
+       left:17.5vw;
+    }
+    
+     .butts{
+         position:absolute;
+         background:#c4c4c5;
+         top:14vw;
+         left:34.75vw;
+         width:6.5vw;
+         height:6.5vw;
+         border-radius: 0.4vw;
+         text-align: right;
+     }
+
+     .buttonA
+     {
+         left:42vw;
+
+     }
+     .redButt
+     {
+         width:5vw;
+         height:5vw;
+         border-radius:10vw;
+         background:red;
+         margin:0 auto;
+         margin-top:0.75vw;
+         box-shadow:0.25vw 0vw 0.5vw;
+     }
+
+     .butts label
+     {
+         position:absolute;
+        color:red;
+        font-family: "Nintender";
+        font-size: 1.5vw;
+        top:6.5vw;
+        right:0.1vw;
+     }
+
+
+.nlogo
+{
+    position: absolute;
+    top:4vw;
+    right:3.25vw;
+    color:red;
+    font-family: "Nintender";
+    font-size: 2.125vw;
+    
+}
+
+.allRights
+{
+    position: absolute;
+    color:red;
+    font-size:1.5vw;
+    top:4vw;
+    right:2vw;
+}
+
+.dents
+{
+    position:absolute;
+    left:14vw;
+    top:0.79vw;
+    z-index:4;
+    width: 3vw;
+    height: 2vw;
+    background:rgb(158, 156, 156);
+}
+.dentOne
+{
+    top:0.79vw;
+    z-index:5;
+    background:#cecfcf; 
+    width:1vw;
+    height:2vw;
+    box-shadow: 0.5vw 0vw 0.6vw rgba(0,0,0,0.4);
+}
+
+.dentThree
+{
+    z-index:5;
+    top:2.3vw;
+    left:14.5vw;
+    background:#cecfcf; 
+}
+
+.dClick:hover
+    {
+       
+        cursor: pointer;
+    }
+
+    .menuText
+    {
+        position:absolute;
+        z-index:6;
+        width:52vw;
+        height:27.5vw;
+        display:inline-block;
+        /* outline:2px solid red; */
+    }
+
+    .textGroup
+    {
+        display: inline-block;
+        width:32.75%;
+        height: 99%;
+        /* outline:0.2vw solid blue; */
+    }
+    .dClick
+    {
+        position:absolute;
+        border: none;
+        left:6.8vw;
+        top:12vw;
+        z-index:7;
+        width:5vw;
+        height:3.5vw;
+        background:transparent;
+        /* outline:0.25vw solid red; */
+    }
+
+    .dLft
+    {
+        left:3.5vw;
+        top:15.75vw;
+        height:4.5vw;
+        width:3vw;
+    }
+
+    .dRgt
+    {
+        left:12vw;
+        top:15.75vw;
+        height:4.5vw;
+        width:3vw;
+    }
+    .dBtm
+    {
+        left:6.8vw;
+        top:20.5vw;
+        width:5vw;
+        height:3.5vw;
+    }
+
+
