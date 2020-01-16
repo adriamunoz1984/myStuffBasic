@@ -7,6 +7,16 @@
     background-origin: unset;
 } */
 
+.walls
+{
+    position:absolute;
+    height:20vw;
+    width:500vw;
+    background: black ;
+    background:2px solid red;
+    opacity: 0.9;
+    animation: shadowOpacity 5s linear infinite;
+}
 .wOnes
 {
     /* background:   blue; */
@@ -88,18 +98,6 @@ transform: rotateX(90deg) translateZ(250vw);
  {
      0%{ transform: translateX(-100vw);}
      100%{transform:translateX(100vw);}
- }
-
- 
- .walls
- {
-     position:absolute;
-     height:20vw;
-     width:500vw;
-     background: black ;
-     background:2px solid red;
-     opacity: 0.9;
-     animation: shadowOpacity 5s linear infinite;
  }
 
  .shadow-wrapper
