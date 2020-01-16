@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+      
+    </head>
+    <style>
+    /* .walls
+    {
+        position:absolute;
+        height:20vw;
+        width:20vw;
+        background: green ;
+        background:2px solid red;
+        opacity: 0.5;
+    } */
+
+    .walls
+    {
+        position:absolute;
+        height:20vw;
+        width:500vw;
+        background: black ;
+        background:2px solid red;
+        opacity: 0.9;
+        animation: shadowOpacity 5s linear infinite;
+    }
+
+    .shadow-wrapper
+    {
+      position: relative;
+      z-index: 4;
+      top:20vw;
+      height:20vw;
+      width:20vw;
+       perspective: 80vw;
+       perspective-origin: 50% 50%;
+       margin: 0 auto;
+       /* animation: shadowPass 5s linear infinite alternate; */
+       /* animation: shadowMove 5s linear infinite;  */
+    }
+    
+
+    .shadowBox{
+        position:relative;
+        z-index: 5;
+        transform-style: preserve-3d;
+        width:20vw;
+        height:20vw;
+        left:20vw;
+        top:20vw;
+        /* transform: rotateY(-45deg)  translateZ(20vw); */
+        animation: shadowMove 5s linear infinite;
+        /* animation: shadowOpacity 5s linear infinite; */
+       /* animation: shadowPass 15s linear infinite alternate; */
+        
+    }
+    
+/*
+    .wOnes_in
+    {
+        background:   rgb(105, 243, 93);
+        transform: rotateY(0deg) translateZ(-50vw) translateX(0vw)
+    }
+    .wTwos_in
+    {
+        background:   rgb(109, 79, 219);
+        transform: rotateX(90deg) translateZ(-10vw) translateY(-20vw);
+    }
+    .wThrees_in
+    {
+        background:   rgb(223, 138, 70);
+        transform: rotateY(90deg) translateZ(10vw) translateX(20vw);
+    }
+    .wFours_in
+    {
+        background:   rgb(100, 12, 12);
+        transform: rotateY(270deg) translateZ(10vw) translateX(-20vw);
+    }
+    .wFives_in
+    {
+        background:   rgb(228, 56, 176);
+        transform: rotateX(90deg) translateZ(10vw) translateY(-20vw);
+    }
+
+    .wSixs_in
+    {
+        background:   purple;
+        transform: rotateX(-90deg) translateZ(10vw) translateX(-20vw);
+    }
+    
+*/
+    .wOnes
+    {
+        /* background:   blue; */
+        width:20vw;
+        transform: rotateY(0deg) translateZ(250vw);/*Facing back*/
+    }
+    .wTwos
+    {
+        /* background:   green; */
+        transform: rotateY(90deg) translateZ(-230vw); /*facing right*/
+    }
+    .wThrees
+    {
+        /* background:   yellow; */
+        transform: rotateY(-90deg) translateZ(250vw);/*facing left*/
+    }
+    .wFours
+    {
+        width:20vw;
+        background:   transparent;
+        transform: rotateY(0deg) translateZ(-250vw);/*Facing Front*/
+    }
+    .wFives {
+    width: 20vw;
+    height: 100vw;
+    /* background: orange; */
+    transform: rotateX(90deg) translateZ(230vw);
+    }
+
+    .wSixs {
+    /* background: purple; */
+    width: 20vw;
+    height: 500vw;
+    transform: rotateX(90deg) translateZ(250vw);
+    }
+
+    .buttonMove
+    {
+        font-size: 2vw;
+        color:red;
+        font-weight:bold;
+        height:5vw;
+        width:auto;
+        position:absolute;
+        z-index:50;
+        top:20vw;
+        left:10vw;
+    }
+
+    .buttonTurn
+    {
+        font-size: 2vw;
+        color:red;
+        font-weight:bold;
+        height:5vw;
+        width:auto;
+        position:absolute;
+        z-index:50;
+        top:20vw;
+        right:10vw;
+    }
+
+    @keyframes shadowRotate
+     {
+         0%{   transform: rotateY(-45deg);}
+         100%{ transform: rotateY( 30deg);}
+     }
+
+     @keyframes shadowOpacity
+     {
+         0%{ opacity:0;}
+         25%{ opacity:0.5;}
+         37%{ opacity:1;}
+         50%{ opacity:0.5;}
+         100%{ opacity:0;}
+     }
+
+     @keyframes shadowMove
+     {
+         0%{ transform: translateX(-100vw);}
+         100%{transform:translateX(100vw);}
+     }
+
+     body{
+         background: black;
+         overflow: hidden;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-origin: unset;
+     }
+
+     .ship
+     {
+         position: relative;
+         z-index: 6;
+         width:20vw;
+         height:20vw;
+        
+         transform: rotateZ(90deg) translateZ(-20vw);
+         /* animation: shadowMove 1s linear infinite alternate;  */
+     }
+
+     .star
+     {
+         position:absolute;
+         z-index: 1;
+         height:50vw;
+         width:50vw;
+         left:25vw;
+         border-radius:50vw;
+         background:yellow;
+     }
+
+    </style>
+   <body>
+       <button class="buttonMove">Move</button>
+       <button class="buttonTurn">Turn</button>
+        <div class="star"></div>
+       <div class="shadow-wrapper">
+            
+        <div class="shadowBox">
+            <!-- <div class="walls wOnes_in"></div>
+            <div class="walls wTwos_in"></div>
+            <div class="walls wThrees_in"></div>
+            <div class="walls wFours_in"></div>
+            <div class="walls wFives_in"></div> -->
+
+            <div class="walls wOnes"></div>
+            <div class="walls wTwos"></div>
+            <div class="walls wThrees"></div>
+            <div class="walls wFours">
+                <img src="img/ship.png" alt="" class="ship">
+            </div>
+            <div class="walls wFives"></div>
+            <div class="walls wSixs"></div>   
+         </div>
+       </div>
+       
+
+   </body>
+</html>

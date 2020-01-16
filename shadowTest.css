@@ -1,0 +1,155 @@
+/* body{
+    background: black;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: unset;
+} */
+
+.wOnes
+{
+    /* background:   blue; */
+    width:20vw;
+    transform: rotateY(0deg) translateZ(250vw);/*Facing back*/
+}
+.wTwos
+{
+    /* background:   green; */
+    transform: rotateY(90deg) translateZ(-230vw); /*facing right*/
+}
+.wThrees
+{
+    /* background:   yellow; */
+    transform: rotateY(-90deg) translateZ(250vw);/*facing left*/
+}
+.wFours
+{
+    width:20vw;
+    background:   transparent;
+    transform: rotateY(0deg) translateZ(-250vw);/*Facing Front*/
+}
+.wFives {
+width: 20vw;
+height: 100vw;
+/* background: orange; */
+transform: rotateX(90deg) translateZ(230vw);
+}
+
+.wSixs {
+/* background: purple; */
+width: 20vw;
+height: 500vw;
+transform: rotateX(90deg) translateZ(250vw);
+}
+
+.buttonMove
+{
+    font-size: 2vw;
+    color:red;
+    font-weight:bold;
+    height:5vw;
+    width:auto;
+    position:absolute;
+    z-index:50;
+    top:20vw;
+    left:10vw;
+}
+
+.buttonTurn
+{
+    font-size: 2vw;
+    color:red;
+    font-weight:bold;
+    height:5vw;
+    width:auto;
+    position:absolute;
+    z-index:50;
+    top:20vw;
+    right:10vw;
+}
+
+@keyframes shadowRotate
+ {
+     0%{   transform: rotateY(-45deg);}
+     100%{ transform: rotateY( 30deg);}
+ }
+
+ @keyframes shadowOpacity
+ {
+     0%{ opacity:0;}
+     25%{ opacity:0.5;}
+     37%{ opacity:1;}
+     50%{ opacity:0.5;}
+     100%{ opacity:0;}
+ }
+
+ @keyframes shadowMove
+ {
+     0%{ transform: translateX(-100vw);}
+     100%{transform:translateX(100vw);}
+ }
+
+ 
+ .walls
+ {
+     position:absolute;
+     height:20vw;
+     width:500vw;
+     background: black ;
+     background:2px solid red;
+     opacity: 0.9;
+     animation: shadowOpacity 5s linear infinite;
+ }
+
+ .shadow-wrapper
+ {
+   position: relative;
+   z-index: 4;
+   top:20vw;
+   height:20vw;
+   width:20vw;
+    perspective: 80vw;
+    perspective-origin: 50% 50%;
+    margin: 0 auto;
+    /* animation: shadowPass 5s linear infinite alternate; */
+    /* animation: shadowMove 5s linear infinite;  */
+ }
+ 
+
+ .shadowBox{
+     position:relative;
+     z-index: 5;
+     transform-style: preserve-3d;
+     width:20vw;
+     height:20vw;
+     left:20vw;
+     top:20vw;
+     /* transform: rotateY(-45deg)  translateZ(20vw); */
+     animation: shadowMove 5s linear infinite;
+     /* animation: shadowOpacity 5s linear infinite; */
+    /* animation: shadowPass 15s linear infinite alternate; */
+     
+ }
+
+ .ship
+ {
+     position: relative;
+     z-index: 6;
+     width:20vw;
+     height:20vw;
+    
+     transform: rotateZ(90deg) translateZ(-20vw);
+     /* animation: shadowMove 1s linear infinite alternate;  */
+ }
+
+ .star
+ {
+     position:absolute;
+     z-index: 1;
+     height:50vw;
+     width:50vw;
+     left:25vw;
+     border-radius:50vw;
+     background:yellow;
+ }
