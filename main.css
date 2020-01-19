@@ -1,4 +1,28 @@
     
+    
+    .menu
+    {
+        position:absolute;
+        z-index:10;
+        top:25vw;
+        left:50vw;
+    }
+    .menu>li
+    {
+        display: inline-block;
+        height:40px;
+        width:auto;
+        background:red;
+        margin-right:0.2vw;
+        list-style: none;
+    }
+
+    .menu.li.a
+    {
+        font-size: 30px;
+        
+    }
+    
     .cont-outer
     {
         position:absolute;

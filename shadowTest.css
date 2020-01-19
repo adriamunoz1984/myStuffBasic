@@ -1,11 +1,13 @@
-/* body{
+body{
     background: black;
-    overflow: hidden;
+    overflow-X: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: unset;
-} */
+    height:200vw;
+    overflow-x: scroll;
+}
 
 .walls
 {
@@ -15,7 +17,7 @@
     background: black ;
     background:2px solid red;
     opacity: 0.9;
-    animation: shadowOpacity 5s linear infinite;
+    /* animation: shadowOpacity 5s linear infinite; */
 }
 .wOnes
 {
@@ -28,29 +30,33 @@
     /* background:   green; */
     transform: rotateY(90deg) translateZ(-230vw); /*facing right*/
 }
+
 .wThrees
 {
     /* background:   yellow; */
     transform: rotateY(-90deg) translateZ(250vw);/*facing left*/
 }
+
 .wFours
 {
     width:20vw;
     background:   transparent;
     transform: rotateY(0deg) translateZ(-250vw);/*Facing Front*/
 }
-.wFives {
-width: 20vw;
-height: 100vw;
-/* background: orange; */
-transform: rotateX(90deg) translateZ(230vw);
+
+.wFives 
+{
+    width: 20vw;
+    height: 100vw;
+    /* background: orange; */
+    transform: rotateX(90deg) translateZ(230vw);
 }
 
 .wSixs {
-/* background: purple; */
-width: 20vw;
-height: 500vw;
-transform: rotateX(90deg) translateZ(250vw);
+    /* background: purple; */
+    width: 20vw;
+    height: 500vw;
+    transform: rotateX(90deg) translateZ(250vw);
 }
 
 .buttonMove
@@ -124,7 +130,7 @@ transform: rotateX(90deg) translateZ(250vw);
      left:20vw;
      top:20vw;
      /* transform: rotateY(-45deg)  translateZ(20vw); */
-     animation: shadowMove 5s linear infinite;
+     /* animation: shadowMove 5s linear infinite; */
      /* animation: shadowOpacity 5s linear infinite; */
     /* animation: shadowPass 15s linear infinite alternate; */
      

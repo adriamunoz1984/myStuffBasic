@@ -9,31 +9,48 @@
   crossorigin="anonymous"></script>
       
     </head>
- 
-   <body>
-       <button class="buttonMove">Move</button>
-       <button class="buttonTurn">Turn</button>
-        <div class="star"></div>
-       <div class="shadow-wrapper">
-            
-        <div class="shadowBox">
-            <!-- <div class="walls wOnes_in"></div>
-            <div class="walls wTwos_in"></div>
-            <div class="walls wThrees_in"></div>
-            <div class="walls wFours_in"></div>
-            <div class="walls wFives_in"></div> -->
+   
+    <body>
 
-            <div class="walls wOnes"></div>
-            <div class="walls wTwos"></div>
-            <div class="walls wThrees"></div>
-            <div class="walls wFours">
-                <img src="img/ship.png" alt="" class="ship">
+        <ul class="menu">
+            <li class="menLi"><a href="shadowTest.html">ShadowTest</a></li>
+            <li class="menLi"><a href="index.html">index</a></li>
+            <li class="menLi"><a href="">option 3</a></li>
+            <li class="menLi"><a href="">option 4</a></li>
+        </ul>
+        <button class="buttonMove">Move</button>
+        <button class="buttonTurn">Turn</button>
+            <div class="star"></div>
+        <div class="shadow-wrapper">
+                
+            <div class="shadowBox">
+                <!-- <div class="walls wOnes_in"></div>
+                <div class="walls wTwos_in"></div>
+                <div class="walls wThrees_in"></div>
+                <div class="walls wFours_in"></div>
+                <div class="walls wFives_in"></div> -->
+
+                <div class="walls wOnes"></div>
+                <div class="walls wTwos"></div>
+                <div class="walls wThrees"></div>
+                <div class="walls wFours">
+                    <img src="img/ship.png" alt="" class="ship">
+                </div>
+                <div class="walls wFives"></div>
+                <div class="walls wSixs"></div>   
             </div>
-            <div class="walls wFives"></div>
-            <div class="walls wSixs"></div>   
-         </div>
-       </div>
-       
+        </div>   
+    <script>  
+        window.addEventListener('scroll', () => {
+           const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+           const scrolled = window.scrollY;
 
+           if ((scrolled) === scrollable)
+           {
+            alert("Rock Bottom");
+           }
+         
+        });
+    </script>
    </body>
 </html>
