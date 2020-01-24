@@ -16,8 +16,8 @@ body{
     width:500vw;
     background: black ;
     background:2px solid red;
-    opacity: 0.5;
-    filter:blur(3vw);
+    /* opacity: 0.5; */
+    /* filter:blur(3vw); */
     /* animation: shadowOpacity 5s linear infinite; */
 }
 .wOnes
@@ -129,7 +129,7 @@ body{
      width:20vw;
      height:20vw;
      left:-100vw;
-     /* top:20vw; */
+     top:15vw;
      /* transform: rotateY(-45deg)  translateZ(20vw); */
      /* animation: shadowMove 5s linear infinite; */
      /* animation: shadowOpacity 5s linear infinite; */
