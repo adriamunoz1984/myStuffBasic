@@ -9,23 +9,26 @@
     {
         position:absolute;
         z-index:10;
-        top:25vw;
-        left:50vw;
+        left:35vw;
     }
     .menu>li
     {
         display: inline-block;
-        height:40px;
+        height:auto;
         width:auto;
-        background:red;
+        background:rgb(54, 54, 54);
         margin-right:0.2vw;
         list-style: none;
+         border-radius: 0.5vw;
+        padding: 1vw;
     }
 
-    .menu.li.a
+    .menu>li>a
     {
-        font-size: 30px;
-        
+        text-decoration: none !important;
+        color:#fff;
+        font-weight:bold;
+        font-size:2vw;
     }
 
  
