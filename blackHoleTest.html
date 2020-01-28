@@ -11,16 +11,14 @@
         {
             overflow:hidden;
         }
-        .bh_wrapper
-        {
-            top:10vw;
-            height:40vw;
-            width:40vw;
+            .bh_wrapper {
+            top: 10vw;
+            height: 40vw;
+            width: 40vw;
             position: relative;
-            perspective: 35vw;
+            perspective: 30vw;
             perspective-origin: 50% 50%;
             margin: 0 auto;
-            
         }
         .blackHole
         {
@@ -38,12 +36,11 @@
             animation: spins 5s linear infinite
         }
 
-        .bh_two
-        {
+        .bh_two {
             background: black;
             transform: rotateX(90deg);
             z-index: 4;
-            transform: rotateX(139deg) translateZ(-10vw) translateY(2vw);
+            transform: rotateX(152deg) translateZ(-7vw) translateY(-2vw);
             left: 10vw;
             top: 15vw;
             width: 20vw;
@@ -55,7 +52,7 @@
         .bh_three
         {
             background:orange;
-            /* transform: rotateX(90deg); */
+            /* transform: rotateX(126deg); */
             animation: spins2 5s linear infinite
             
             
@@ -78,24 +75,27 @@
             width:4vw;
             height:1vw;
         }
-        .blackHole_entire
-        {
-            height:40vw;
-            width:40vw;
+        .blackHole_entire {
+            height: 40vw;
+            width: 40vw;
             transform-style: preserve-3d;
-            transform: rotateX(60deg);
-
+            transform: rotateX(68deg);
         }
        
         @keyframes spins
         {
-            0%{transform:rotateZ(0deg)}
+            0%{  transform:rotateZ(0deg)}
+            25%{ transform:rotateZ(20deg)}
+            75%{ transform:rotateZ(90deg)}
             100%{transform:rotateZ(360deg)}
         }
+
         @keyframes spins2
         {
-            0%{transform:rotateY(0deg)rotateX(90deg) rotateZ(0)}
-            100%{transform:rotateY(0deg) rotateX(90deg) rotateZ(-360deg)}
+            0%{  transform:rotateY(0deg) rotateX(137deg) rotateZ(0)}
+            25%{ transform:rotateY(0deg) rotateX(137deg) rotateZ(-20deg)}
+            75%{ transform:rotateY(0deg) rotateX(137deg) rotateZ(-90deg)}
+            100%{transform:rotateY(0deg) rotateX(137deg) rotateZ(-360deg)}
         }
         .subBT_two
         {
@@ -112,6 +112,18 @@
             left:32vw;
             top:16vw;
         }
+        .bh_four {
+            background: black;
+            transform: rotateX(90deg);
+            z-index: 4;
+            transform: rotateX(123deg) translateZ(-1vw) translateY(-5vw);
+            left: 10vw;
+            top: 15vw;
+            width: 20vw;
+            height: 20vw;
+            /* margin: 0 auto; */
+            background-color: black;
+        }
        
         
     </style>
@@ -124,15 +136,14 @@
                     <div class="ballT subBT_three"></div>
                     <div class="ballT subBT_four"></div>
                 </div>
-                <div class="blackHole bh_two">
-
-                </div>
+                <div class="blackHole bh_two"></div>
                     <div class="blackHole bh_three">
                         <div class="ballT subBT_one"></div>
                         <div class="ballT subBT_two"></div>
                         <div class="ballT subBT_three"></div>
                         <div class="ballT subBT_four"></div>
                     </div>
+                <div class="blackHole bh_four"></div>
                 </div>
                 
             </div>
