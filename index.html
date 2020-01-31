@@ -7,7 +7,19 @@
         <script src="script.js"></script>
     </head>
     <style>
-    
+        .menuRing
+        {
+            position:absolute;
+            z-index:10;
+            top:25vw;
+            left:50vw;
+            height:auto;
+            width:auto;
+            padding:5vw;
+            background:blue;
+            border-radius: 10vw;
+
+        }
     </style>
     <body>
         
@@ -15,13 +27,15 @@
 <!-- most classes are paired with a unit class to design grouped items first then individually-->
 <!-- all messurements are set to 'vw' for better responsive dsign-->
 <!-- Most objets are set to absolute and positioned into place. the 'vw' units keep everything aligned-->
+<div class="menuRing">
+    <ul class="menu">
+        <li class="menLi"><a href="shadowTest.html">ShadowTest</a></li>
+        <li class= "menLi"><a href="">option 2</a></li>
+        <li class="menLi"><a href="">option 3</a></li>
+        <li class="menLi"><a href="">option 4</a></li>
+    </ul>
+</div>
 
-<ul class="menu">
-    <li class="menLi"><a href="shadowTest.html">ShadowTest</a></li>
-    <li class="menLi"><a href="">option 2</a></li>
-    <li class="menLi"><a href="">option 3</a></li>
-    <li class="menLi"><a href="">option 4</a></li>
-</ul>
     <div class="controllerMenu">
         <!-- Section of the controller leading to the cord-->
         <div class="dents dentOne"></div>
