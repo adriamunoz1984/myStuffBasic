@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="shadowTest.css">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>      
+    </head>
+    <style>
+        .sunshine
+{
+    width:5vw;
+    height:5vw;
+    background:#fff;
+    border-radius:50px;
+    position:fixed;
+    top:25px;
+    left:25px;
+    z-index:0;
+}
+
+
+.header
+{
+    min-height: 1537px;
+    height:auto;
+    overflow:hidden;
+    position:relative;
+    /* background-image: url("img/MarsBg_0.png"); */
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover; 
+    z-index:-5;
+}
+
+
+
+.layer
+{
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* min-height: 837px; */
+    height: 83vw;
+    position: fixed;
+    z-index: -1;
+    /* top: 500px; */
+}
+
+/* .layer-zero
+{
+    background-image:url("img/MarsBg_0.png");
+} */
+
+.layer-bg
+{
+    background-image:url("img/MarsBg_4.png");
+ 
+}
+
+.layer-one
+{
+    background-image:url("img/MarsBg_3.png");
+   
+}
+
+.layer-two
+{
+    background-image:url("img/MarsBg_2.png");
+}
+
+.layer-three
+{
+    background-image:url("img/MarsBg_1.png");
+    z-index:1;
+}
+
+.et_pb_section 
+{
+	position:relative;
+	z-index:5;
+}
+
+
+.em-title
+{
+	position:relative;
+	top:20vw;
+	color:#fff;
+	font-size:2vw;
+}
+
+.em-title h1
+{
+	position:relative;
+	
+}
+
+.em-title p
+{
+	color:#fff;
+	font-size:2vw;
+
+}
+
+/********************************Planets and rocket******************************/
+
+
+.par {
+	 background-position:bottom center;
+    background-repeat: no-repeat;
+    background-size:cover; 
+}
+/* 
+.stars1
+{
+    background-image: url(http://www.evolveremachina.com/wp-content/uploads/2019/02/spaceBg1.png);
+}
+.stars2
+{
+    background-image: url(http://www.evolveremachina.com/wp-content/uploads/2019/02/spaceBg2.png);
+}
+.stars3
+{
+    background-image: url(http://www.evolveremachina.com/wp-content/uploads/2019/02/spaceBg3.png);
+}
+
+.stars1,
+.stars2,
+.stars3 {
+    height:1366px;
+    width:100%;
+    position:absolute;
+}
+
+.planet {
+	height:2000px;
+    width:2000px;
+    background:orange;
+    border-radius:1000px;
+    position:relative;
+    top:-500px;
+    
+    z-index:7;
+     filter: blur(4px);
+}
+
+.planet2
+{
+    height:1900px;
+    width:1900px;
+    background:rgba(0,0,0,0.8);
+    border-radius:1000px;
+    position:relative;
+    top:-200px;
+    animation: hori 15s linear infinite;
+    z-index:10;
+}
+
+section.space
+{
+    height:40vw;
+    overflow:hidden;
+    position: relative;
+    top:0px;
+    
+    background-image: url("img/BLACKbg.png");
+     background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:auto;
+    width:100%;
+    
+    
+}
+
+
+.blackHole
+{
+    
+/*    animation: rot 45s linear infinite;
+    height:15vw;
+    width:15vw;
+    margin:0 auto;
+    transform: rotateX(50deg);
+    border-radius: 500px;
+    background:yellow;
+    position:relative;
+    top:15vw;
+}
+
+.rocket
+{
+    background-image: url("http://www.evolveremachina.com/wp-content/uploads/2019/02/RocketBack.png");
+     background-position:center;
+    background-repeat: no-repeat;
+    background-size:contain;
+	position:relative;
+    height:20vw;
+    width:20vw;
+    margin:0 auto;
+	animation: shake 0.10s linear infinite;
+   animation: unblur 3s linear 4s infinite;
+    
+   
+   filter: blur(6px);
+}*/
+
+.ship {
+    position:absolute;
+    top:20vw;
+    left:60%;
+    
+    z-index:7;
+}
+
+.fire 
+{
+	background:yellow;
+    opacity:0.5;
+    width:12vw;
+    height:12vw;
+    border-radius:300px;
+    position:absolute;
+    margin:0 auto;
+    top:7vw;
+    left:34%;
+    filter: blur(8px);
+    z-index:5;
+    animation: grow 2s linear infinite;
+}
+
+#saturn
+{
+    position:relative;
+    left:-5px;
+    /*animation: hori 10s linear infinite;*/
+	top:-9.75vw;
+}
+
+
+.sat
+{
+    background-image: url(http://www.evolveremachina.com/wp-content/uploads/2019/02/Planet.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 53vw;
+    z-index: 2;
+} */
+
+.ball
+{
+    height: 35vw;
+    width: 35vw;
+    margin: 0 auto;
+    border-radius: 500px;
+    background: rgba(0,0,0,1);
+    position: absolute;
+    z-index: -1;
+    left: 27.75vw;
+    top: 05.75vw;
+    overflow: hidden;
+}
+
+.ball2 {
+	height: 38vw;
+    width: 38vw;
+    z-index: 5;
+    left: -3vw;
+    top: 1vw;
+}
+
+.red
+{
+    height:auto;
+    min-height: 100%;
+    width:100%;
+    
+}
+.ringu
+{
+    height:70vw;
+    width:70vw;
+    background:red;
+    border-radius:700px;
+    position:relative;
+    left: 27vw;
+/*    perspective: 500;*/
+    transform:rotate3d(1,0,0,80deg);
+}
+.shadow
+{
+    height: auto;
+    min-height: 160vw;
+    width: 30.5vw;
+    background: rgba(0,0,0,1);
+    position: relative;
+    left: 13vw;
+    transform: skew(-40deg,-22deg);
+    top: 25vw;
+    animation: skewing 10s linear infinite;
+    display:none; /* for now*/
+}
+
+@media only screen and (max-width:600px)
+{
+	.ship 
+	{
+    	top:75vw;
+	}
+	
+	#saturn 
+	{
+    	top: 20vw;
+	}
+}
+
+@keyframes skewing
+{
+    0%{transform: skew(-40deg,-22deg); left: -25vw;top: 25vw;}
+    100%{transform:skew(0deg,0deg); left: 25;top: 19vw;}
+}
+
+@keyframes hori
+{
+    from{left:-25vw;}
+    to{left:25vw;}
+}
+
+
+@keyframes rot
+{
+    from{transform:rotate(0deg);height:200px;width:400px}
+    to{transform:rotate(360deg);height:300px;width:500px;}
+   
+}
+
+@keyframes grow
+{
+    0%{padding:0vw}
+    50%{padding:1vw}
+    100%{padding:0vw}
+    
+   
+}
+
+@keyframes shake
+{
+    from{top:51px}
+    to{top:53px}
+   
+}
+
+
+
+
+/****************backgound Pattern****/
+.grid 
+           {
+               position:absolute;
+               width:95%;
+               height:40vw;
+              
+               background:#d6d6d6;
+               
+               overflow:hidden;
+               z-index:-100;
+               opacity: 0.125;
+           }
+        
+        .rows
+        {
+            margin:0 auto;
+            width:100%;
+            height:89vh; 
+        }
+           
+        .colum 
+        {
+	        width:11vw;
+            height:11vw;
+            background:#fff;
+            display:inline-block;
+            border-radius:200px;
+/*            border:5px solid gray;*/
+            box-shadow: 0px -20px 50px;
+        }
+        
+        .sec1
+        {
+	        position:absolute;
+            z-index:2;
+            height:100hw;
+        }
+        
+        .sec1 .colum 
+        {
+	        position:relative;
+            top:100vh;
+            left:-5vw;
+        }
+        
+        .sec2
+        {
+            position:absolute;
+            z-index:-1;
+            height:100vh;
+        }
+        
+        .sec2 .colum
+        {
+	        position:relative;
+            top:90vh;
+        }
+        
+        .sec3 
+        {
+	        position:absolute;
+            z-index:-2;
+            height:80vh;
+            left:-5vw;
+        }
+        
+        .sec3 .colum
+        {
+	       position:relative;
+            top:80vh;
+        }
+        
+        .sec4 
+        {
+	        position:absolute;
+            z-index:-3;
+            height:70vh;
+           
+        }
+        
+        .sec4 .colum
+        {
+	       position:relative;
+           top:70vh;
+        }
+        
+        .sec5 
+        {
+	        position:absolute;
+            z-index:-4;
+            height:60vh;
+            left:-5vw;
+           
+        }
+        .sec5 .colum
+        {
+	       position:relative;
+            top:60vh;
+        }
+        
+        
+        .sec6 
+        {
+	        position:absolute;
+            z-index:-5;
+            height:50vh;
+           
+        }
+        .sec6 .colum{
+	       position:relative;
+            top:50vh;
+        }
+        
+        
+        .sec7 {
+	        position:absolute;
+            z-index:-6;
+            height:40vh;
+            left:-5vw;
+           
+        }
+        .sec7 .colum{
+	       position:relative;
+            top:40vh;
+        }
+        
+        
+        .sec8 {
+	        position:absolute;
+            z-index:-7;
+            height:30vh;
+           
+        }
+        .sec8 .colum{
+	       position:relative;
+           top:30vh;
+        }
+        
+        
+        .sec9 {
+	        position:absolute;
+            z-index:-8;
+            height:20vh;
+            left:-5vw;
+           
+        }
+        .sec9 .colum{
+	       position:relative;
+            top:20vh;
+        }
+        
+        
+        .sec10 {
+	        position:absolute;
+            z-index:-10;
+            height:10vh;
+           
+        }
+        .sec10 .colum{
+	       position:relative;
+            top:10vh;
+        }
+        
+      
+        
+        .circle {
+	           background: transparent;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 100px;
+    position: relative;
+    left: 1.5vw;
+    top: 1.5vw;
+    box-shadow: 0px -20px 30px;
+        }
+    .service-things
+    {
+        border:none;
+    box-shadow:0px 0px 15px 05px red;
+    background:rgba(0,0,0,0.2);
+    }
+
+    .service-things .et_pb_blurb_content .et_pb_blurb_container
+    {
+    min-height:10vw !important;
+        
+    }
+
+    .hexag
+    {
+        height:100px;
+        width:100px;
+        position:absolute;
+        z-index:10;
+        background:green;
+        top:12.5%;
+        left:32%;
+    }
+
+    .service-hex
+    {
+        margin:0 auto;
+    }
+
+
+    .service-hex:nth-child(n+2)
+    {
+        bottom:20vw;
+    }
+    </style>
+    <body>
+        <ul class="menu">
+            <li class="menLi"><a href="index.html">Nintendo</a></li>
+            <li class="menLi"><a href="shadowTest.html">Shadow Test</a></li>
+            <li class="menLi"><a href="blackHoleTest.html">Black Hole Test</a></li>
+            <li class="menLi"><a href="parallaxTest.html">Mars Parallax</a></li>
+        </ul>
+        <section class="header" id="home">
+            <div class="sunshine"></div>
+            <div class="layer layer-zero " data-speed="0.05"></div>
+            <div class="layer layer-bg   " data-speed="0.10"></div>
+            <div class="layer layer-one  " data-speed="0.25"></div>
+            <div class="layer layer-two  " data-speed="0.50"></div>
+            <div class="layer layer-three" data-speed="0.75"></div>    
+        </section>
+        <script>
+        jQuery(document).ready(function( $ )
+        {
+        $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        $('.layer').each(function()
+        {
+            var layer = $(this);
+            var dataSpeed = layer.data('speed');
+            var offsetY = -(scrollTop * dataSpeed);
+            var translate = 'translate3d(0, ' + offsetY+ 'px, 0)';
+            layer.css('-webkit-transform', translate);
+            layer.css('-moz-transform', translate);
+            layer.css('-ms-transform', translate);
+            layer.css('-o-transform', translate);
+            layer.css('transform', translate);
+        });
+      
+        $('.par').each(function(){
+            var layer = $(this);
+            var dataSpeed = layer.data('speed');
+            var offsetY = -(scrollTop * dataSpeed);
+          
+            var translate = 'translate3d(0, ' + offsetY+ 'px, 0)';
+            layer.css('-webkit-transform', translate);
+            layer.css('-moz-transform', translate);
+            layer.css('-ms-transform', translate);
+            layer.css('-o-transform', translate);
+            layer.css('transform', translate);
+        });
+    });
+  
+  	 $(window).on('scroll', function () 
+       {
+        var pixs = $(document).scrollTop()
+        var pixs2 = pixs /100;
+		var vari = pixs/3;
+        pixs = pixs / 400;
+    
+    //     $(".stars3").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" });
+    //     $(".stars2").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" });
+    //     $(".stars1").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" });
+    //     $(".black"  ).css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" });
+    //     $("#saturn"  ).css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" });   
+    //     $("#saturn"  ).css({"left": ""+pixs2+"vw" });
+    //    $(".colum").css({"transform": "rotate("+vari+"deg)"});
+
+       $(".layer-three").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" });
+
+            });
+        });
+        </script>
+    </body>
+</html>

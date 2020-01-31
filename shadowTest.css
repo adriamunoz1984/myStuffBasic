@@ -16,7 +16,8 @@ body{
     width:500vw;
     background: black ;
     background:2px solid red;
-    opacity: 0.9;
+    /* opacity: 0.5; */
+    /* filter:blur(3vw); */
     /* animation: shadowOpacity 5s linear infinite; */
 }
 .wOnes
@@ -127,8 +128,8 @@ body{
      transform-style: preserve-3d;
      width:20vw;
      height:20vw;
-     left:20vw;
-     top:20vw;
+     left:-100vw;
+     top:15vw;
      /* transform: rotateY(-45deg)  translateZ(20vw); */
      /* animation: shadowMove 5s linear infinite; */
      /* animation: shadowOpacity 5s linear infinite; */
@@ -139,11 +140,10 @@ body{
  .ship
  {
      position: relative;
-     z-index: 6;
+     z-index: 0;
      width:20vw;
      height:20vw;
-    
-     transform: rotateZ(90deg) translateZ(-20vw);
+     transform: rotateZ(90deg) translateZ(-250vw);
      /* animation: shadowMove 1s linear infinite alternate;  */
  }
 
@@ -156,4 +156,5 @@ body{
      left:25vw;
      border-radius:50vw;
      background:yellow;
+     filter:blur(1vw);
  }

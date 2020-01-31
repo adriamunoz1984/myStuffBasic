@@ -4,22 +4,28 @@
       
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="shadowTest.css">
+        <link rel="stylesheet" href="main.css">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-      
+  crossorigin="anonymous"></script>      
     </head>
-   
+   <style>
+       .controllerMenu
+       {
+           position:absolute;
+           top:40vw;
+           left:25vw;
+           z-index:11;
+           opacity:0.7
+       }
+   </style>
     <body>
-
         <ul class="menu">
-            <li class="menLi"><a href="shadowTest.html">ShadowTest</a></li>
-            <li class="menLi"><a href="index.html">index</a></li>
-            <li class="menLi"><a href="">option 3</a></li>
-            <li class="menLi"><a href="">option 4</a></li>
+            <li class="menLi"><a href="index.html">Nintendo</a></li>
+            <li class="menLi"><a href="shadowTest.html">Shadow Test</a></li>
+            <li class="menLi"><a href="blackHoleTest.html">Black Hole Test</a></li>
+            <li class="menLi"><a href="parallaxTest.html">Mars Parallax</a></li>
         </ul>
-        <button class="buttonMove">Move</button>
-        <button class="buttonTurn">Turn</button>
             <div class="star"></div>
         <div class="shadow-wrapper">
                 
@@ -34,22 +40,112 @@
                 <div class="walls wTwos"></div>
                 <div class="walls wThrees"></div>
                 <div class="walls wFours">
-                    <img src="img/ship.png" alt="" class="ship">
                 </div>
+                <img src="img/ship.png" alt="" class="ship">
                 <div class="walls wFives"></div>
-                <div class="walls wSixs"></div>   
-            </div>
-        </div>   
-    <script>  
-        window.addEventListener('scroll', () => {
-           const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-           const scrolled = window.scrollY;
+                <div class="walls wSixs"></div>  
 
-           if ((scrolled) === scrollable)
-           {
-            alert("Rock Bottom");
-           }
-         
+            </div>
+        </div> 
+        
+            <div class="controllerMenu">
+                <!-- Section of the controller leading to the cord-->
+                <div class="dents dentOne"></div>
+                <div class="dents dentTwo"></div>
+                <div class="dents dentThree"></div>
+            
+                <button class="dClick dTop"></button>
+                <button class="dClick dLft"></button>
+                <button class="dClick dRgt"></button>
+                <button class="dClick dBtm"></button>
+            
+                <div class="cont-outer"> <!-- Outer Color of the Controller-->
+                   
+                    <div class="cont-inner">  <!-- Inner colors and content section-->
+                        <!-- Inner Controller is divided into 3 horizontal groups/columns: 
+                            D-pad, Start Select, A and B buttons-->
+                        <div class="d-pad conColumn"> <!-- Group one D-Pad -->
+                            <div class="d-pad-wrapper"> <!-- sorrounds the d-pad to position it as a unit-->
+                                <div class="d-hor d-all">   <!-- Was designed as two rectangles one centered and parallel to the other-->
+                                </div>
+                                <div class="d-ver d-all">
+                                    <div class="d-dent"></div>
+                                    <div class="d-arrow aOne"></div>
+                                    <div class="d-arrow aTwo"></div>
+                                    <div class="d-arrow aThree"></div>
+                                    <div class="d-arrow aFour"></div>
+                                </div>
+                                <div class="d-hor-out d-all"></div> <!-- The D-Pad border/outline also split into two rectangles-->
+                                <div class="d-ver-out d-all"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="start-select conColumn"> <!-- Group Two Start/Select -->
+                            
+                                <div class="cntrPtrns">
+                                    <div class="pttrn ptrnOne"></div>
+                                    <div class="pttrn ptrnTwo"></div>
+                                    <div class="pttrn ptrnThree">
+                                        <label for="start" class="cntrLabel lblStrt">START</label>
+                                        <label for="select" class="cntrLabel lblSlct">SELECT</label>
+                                    </div>
+                                    <div class="pttrn ptrnFour"></div>
+                                
+                                </div>
+                                <div class="out-st-slct">
+                                    <div class="innr-srt-slct">
+                                        <div class="startBut cntrButtns"></div>
+                                        <div class="slctBut cntrButtns"></div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        <div class="ab-buttons conColumn"> <!-- Group Three A-B buttons -->
+            
+                            <div class="compLabel">
+                                <label for="nintendo" class="nlogo">Nintendo</label>
+                                <span class="allRights">&#174; </span>
+                            </div>
+                            <div class="buttSection">
+                                <div class="buttonB butts">
+                                    <div class="redButt redBtOne" name="redBtOne"></div>
+                                    <label for="redBtOne" class="redButB">B</label>
+                                </div>
+                                <div class="buttonA butts">
+                                    <div class="redButt redBtTwo"  name="redBtTwo"></div>
+                                    <label for="redBtTwo" class="redButA">A</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menuText">
+                    <div class="textGroupOne textGroup">
+                        
+                    </div>
+                    <div class="textGroupTwo textGroup"></div>
+                    <div class="textGroupThree textGroup"></div>
+                </div>
+            </div>  
+    <script>  
+    
+        $(function(){
+            // $(document).mousemove(function(e){
+            //     $(".shadowBox").css({left:e.pageX-10, top:e.pageY-10});
+            // }); /*makes mouse float*/ 
+           var leftUp = 0;
+           var inc = 5;
+            $(".dRgt").click(function()
+            {
+                console.log("CACA");
+                $(".shadowBox").css({"left":(leftUp+=inc) +"vw"});
+            });
+
+            $(".dLft").click(function()
+            {
+                console.log("CACA");
+                $(".shadowBox").css({"left":(leftUp-=inc) +"vw"});
+            });
         });
     </script>
    </body>

@@ -3,9 +3,15 @@
     <head>
         <title></title>
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="controller.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="script.js"></script>
     </head>
+    <!-- NINTENDO Controller Menu -->
+<!-- most classes are paired with a unit class to design grouped items first then individually-->
+<!-- all messurements are set to 'vw' for better responsive dsign-->
+<!-- Most objets are set to absolute and positioned into place. the 'vw' units keep everything aligned-->
+
     <style>
         .menuRing
         {
@@ -114,7 +120,55 @@
             <div class="textGroupTwo textGroup"></div>
             <div class="textGroupThree textGroup"></div>
         </div>
+
+        <div class="edges edge_one"></div>
+        <div class="edges edge_two"></div>
+        <div class="edges edge_three"></div>
+        <div class="edges edge_four"></div>
+        <div class="edges edge_five"></div>
+
     </div>
     
+</div>
+<div class="cam-persp">
+    <div class="perp-rotate">
+        <button class="persp pFront">Front</button>
+        <button class="persp pLeft">Left</button>
+        <button class="persp pBack">Back</button>
+        <button class="persp pRight">Right</button>
+        <button class="persp pTop">Top</button>
+        <button class="persp pDown">Down</button>
+    </div>
+</div>
+   <script>
+       $(".pFront").click(function(){
+        $(".controllerMenu").css({"transform":"rotateX(0deg) rotateZ(0deg)","left":"45vw"});
+        $(".perp-rotate").css({"transform":"rotateY(0deg) rotateX(0deg)"});
+       });
+       $(".pRight").click(function(){
+        $(".controllerMenu").css({"transform":"rotateY(-90deg) rotateZ(0deg)"});
+        $(".perp-rotate").css({"transform":"rotateY(-90deg) rotateX(0deg)"});
+       });
+       $(".pBack").click(function(){
+        $(".controllerMenu").css({"transform":"rotateY(180deg) rotateZ(0deg)"});
+        $(".perp-rotate").css({"transform":"rotateY(180deg) rotateX(0deg)"});
+
+       });
+       
+       $(".pLeft").click(function(){
+        $(".controllerMenu").css({"transform":"rotateY(90deg) rotateZ(0deg)"});
+        $(".perp-rotate").css({"transform":"rotateY(90deg) rotateX(0deg)"});
+       });
+       $(".pTop").click(function(){
+        $(".controllerMenu").css({"transform":"rotateX(90deg) rotateZ(0deg)"});
+        $(".perp-rotate").css({"transform":"rotateX(90deg) rotateX(0deg)"});
+
+       });
+       $(".pDown").click(function(){
+        $(".controllerMenu").css({"transform":"rotateX(-90deg) rotateZ(0deg)"});
+        $(".perp-rotate").css({"transform":"rotateX(-90deg) rotateX(0deg)"});
+
+       });
+   </script>
     </body>
 </html>
