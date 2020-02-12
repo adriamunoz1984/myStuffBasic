@@ -8,9 +8,14 @@
     }
     .menu
     {
+<<<<<<< HEAD
         position: relative;
         z-index:10;
         left:35vw;
+=======
+        position: relative;;
+      
+>>>>>>> gh-pages
     }
     .menu>li
     {
