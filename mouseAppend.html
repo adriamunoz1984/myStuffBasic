@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- <link rel="stylesheet" href="main.css"> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>      
+    </head>
+    <style>
+        body{
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        span
+        {
+            position:absolute;
+            background: red;
+            pointer-events: none;
+            transform: translate(-50%,-50%);
+            /* border-radius: 50%; */
+            animation: animate 4s linear infinite;
+        }
+        
+        @keyframes animate
+        {
+            0%{ 
+                 transform: translate(-50%,-50%) rotate(0deg);
+                 opacity:1;
+            }
+            50%
+            {
+                transform: translate(-50%,-300%) rotate(90deg);
+                opacity:1;
+            }
+
+            100%{ transform: translate(-50%,-1000%)rotate(359deg);
+            opacity:0;
+            }
+        }
+    </style>
+    <body>
+        
+        <script>
+            document.addEventListener("mousemove", function(e){
+                var body = document.querySelector('body');
+                var bubbles = document.createElement("span");
+                var x = e.offsetX;
+                var y = e.offsetY;
+                bubbles.style.left = x+'px';
+                bubbles.style.top = y+'px';
+                var size = Math.random() * 100;
+                bubbles.style.width = size+ 'px';
+                bubbles.style.height = size+ 'px';
+                body.appendChild(bubbles);
+
+                setTimeout(function(){
+                    bubbles.remove();
+                },4000);
+
+
+            })
+        </script>
+    </body>
+</html>

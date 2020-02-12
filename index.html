@@ -57,11 +57,11 @@
         }
         .cam-persp
         {
-            position:absolute;
+            position:relative;
             perspective: 300vw;
             perspective-origin: 50% 50%;
-           
-            bottom:10vw;
+            left:10vw;
+            /* bottom:10vw; */
             
         }
 
@@ -84,7 +84,7 @@
         {
             transform-style: preserve-3d;
             transform: rotateY(0deg) rotateX(0deg) translateX(0vw);
-            left: 40vw;
+            /* left: 40vw; */
             position: relative;
             transition:ease-in 0.5s;
         }
@@ -99,36 +99,45 @@
         }
         .pDown
         {
-            transform: rotateX(90deg) translateZ(-5vw);
+            transform: rotateX(-45deg) translateZ(7vw);
         }
 
         .pTop
         {
-            transform: rotateX(90deg) translateZ(5vw);
+            transform: rotateX(45deg) translateZ(7vw);
         }
 
         .pRight
         {
-            transform: rotateY(90deg) translateZ(5vw);
+            transform: rotateY(14deg) translateX(8vw) translateZ(7vw);
         }
 
         .pLeft
         {
-            transform: rotateY(90deg) translateZ(-5vw);
+            transform: rotateY(-14deg) translateX(-8vw) translateZ(7vw);
         }
 
-        
+        .menuRing
+        {
+            position: absolute;
+            
+            background:blue;
+            padding:1vw;
+
+        }
     
     </style>
     <body>
         
 
-<ul class="menu">
-    <li class="menLi"><a href="index.html">Nintendo</a></li>
-    <li class="menLi"><a href="shadowTest.html">Shadow Test</a></li>
-    <li class="menLi"><a href="blackHoleTest.html">Black Hole Test</a></li>
-    <li class="menLi"><a href="parallaxTest.html">Mars Parallax</a></li>
-</ul>
+    <ul class="menu">
+        <li class="menLi"><a href="index.html">Nintendo</a></li>
+        <li class="menLi"><a href="shadowTest.html">Shadow Test</a></li>
+        <li class="menLi"><a href="blackHoleTest.html">Black Hole Test</a></li>
+        <li class="menLi"><a href="parallaxTest.html">Mars Parallax</a></li>
+    </ul>
+
+
 <div class="controller-wrap">
     <div class="controllerMenu">
         <!-- Section of the controller leading to the cord-->
@@ -218,45 +227,56 @@
     </div>
     
 </div>
-<div class="cam-persp">
-    <div class="perp-rotate">
-        <button class="persp pFront">Front</button>
-        <button class="persp pLeft">Left</button>
-        <button class="persp pBack">Back</button>
-        <button class="persp pRight">Right</button>
-        <button class="persp pTop">Top</button>
-        <button class="persp pDown">Down</button>
+    <div class="menuRing">
+        <div class="cam-persp">
+            <div class="perp-rotate">
+                <button class="persp pFront">Front</button>
+                <button class="persp pLeft">Left</button>
+                <button class="persp pBack">Back</button>
+                <button class="persp pRight">Right</button>
+                <button class="persp pTop">Top</button>
+                <button class="persp pDown">Down</button>
+            </div>
+        </div>
     </div>
-</div>
    <script>
+       var leftRIght = 5;
+       var upDown = 5;
+       var incVal = 5;
+
+       
        $(".pFront").click(function(){
         $(".controllerMenu").css({"transform":"rotateX(0deg) rotateZ(0deg)","left":"45vw"});
-        $(".perp-rotate").css({"transform":"rotateY(0deg) rotateX(0deg)"});
+        // $(".perp-rotate").css({"transform":"rotateY(0deg) rotateX(0deg)"});
        });
        $(".pRight").click(function(){
-        $(".controllerMenu").css({"transform":"rotateY(-90deg) rotateZ(0deg)"});
-        $(".perp-rotate").css({"transform":"rotateY(-90deg) rotateX(0deg)"});
+        $(".controllerMenu").css({"transform":"rotateY(-"+(leftRIght+=incVal)+"deg) rotateZ(0deg)"});
+        // $(".perp-rotate").css({"transform":"rotateY(-"+(leftRIght++)+"deg) rotateX(0deg)"});
        });
        $(".pBack").click(function(){
-        $(".controllerMenu").css({"transform":"rotateY(180deg) rotateZ(0deg)"});
-        $(".perp-rotate").css({"transform":"rotateY(180deg) rotateX(0deg)"});
+        $(".controllerMenu").css({"transform":"rotateY("+(leftRIght+=incVal)+"deg) rotateZ(0deg)"});
+        // $(".perp-rotate").css({"transform":"rotateY("+(leftRIght++)+"deg) rotateX(0deg)"});
 
        });
        
        $(".pLeft").click(function(){
-        $(".controllerMenu").css({"transform":"rotateY(90deg) rotateZ(0deg)"});
-        $(".perp-rotate").css({"transform":"rotateY(90deg) rotateX(0deg)"});
+        $(".controllerMenu").css({"transform":"rotateY("+(leftRIght+=incVal)+"deg) rotateZ(0deg)"});
+        // $(".perp-rotate").css({"transform":"rotateY("+(moveUnit++)+"deg) rotateX(0deg)"});
        });
        $(".pTop").click(function(){
-        $(".controllerMenu").css({"transform":"rotateX(90deg) rotateZ(0deg)"});
-        $(".perp-rotate").css({"transform":"rotateX(90deg) rotateX(0deg)"});
+        $(".controllerMenu").css({"transform":"rotateX("+(upDown+=incVal)+"deg) rotateZ(0deg)"});
+        // $(".perp-rotate").css({"transform":"rotateX("+(moveUnit++)+"deg) rotateX(0deg)"});
 
        });
        $(".pDown").click(function(){
-        $(".controllerMenu").css({"transform":"rotateX(-90deg) rotateZ(0deg)"});
-        $(".perp-rotate").css({"transform":"rotateX(-90deg) rotateX(0deg)"});
+        $(".controllerMenu").css({"transform":"rotateX(-"+(upDown+=incVal)+"deg) rotateZ(0deg)"});
+        // $(".perp-rotate").css({"transform":"rotateX(-"+(upDown++)+"deg) rotateX(0deg)"});
 
        });
+
+//pATENT SEARCH GUY
+    //    STEVEN ZASLOW 
+    //    202-413-0012
    </script>
     </body>
 </html>
