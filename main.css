@@ -17,6 +17,116 @@
       
 >>>>>>> gh-pages
     }
+
+    .menuRing
+    {
+        position:absolute;
+       
+        height:4vw;
+        width:52vw;
+        background: #cecfcf;
+        
+    }
+    .controller-wrap
+    {
+        perspective-origin: 50% 50%;
+        perspective:200vw;
+    }
+    .edge_one
+    {
+        transform: rotateX(90deg) translateY(-2vw) translateZ(1.9vw);
+    }
+    .edge_two
+    {
+        transform: rotateX(90deg) translateY(-1.9vw) translateZ(-25.25vw);
+    }
+
+    .edge_three
+    {
+        transform: rotateY(90deg) rotate(90deg) translateY(-1.9vw) translateZ(-13.5vw) translateX(11.6vw);
+       
+        width: 27vw;
+    }
+    .edge_four
+    {
+        transform: rotateY(90deg) rotate(90deg) translateY(-1.9vw) translateZ(38.5vw) translateX(11.6vw);
+        width: 27vw;
+    }
+
+    .edge_five
+    {
+        transform: rotateY(90deg) rotateY(90deg) translateY(-0.2vw) translateZ(3.5vw) translateX(0vw);
+        width: 50.2vw;
+        height: 27vw;
+    }
+    .cam-persp
+    {
+        position:relative;
+        perspective: 300vw;
+        perspective-origin: 50% 50%;
+        left:10vw;
+        /* bottom:10vw; */
+        
+    }
+
+    .persp
+    {
+        position:absolute;
+        height: 5vw;
+        width: 8vw;
+        color: black;
+        background: red;
+        display: inline-block;
+        border-style: none;
+        transition: ease-in-out;
+    }
+
+    
+    .perp-rotate
+    {
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(0deg) translateX(0vw);
+        /* left: 40vw; */
+        position: relative;
+        transition:ease-in 0.5s;
+    }
+    .pFront
+    {
+        transform:translateZ(5vw);
+    }
+
+    .pBack
+    {  
+        transform: translateZ(-5vw);
+    }
+    .pDown
+    {
+        transform: rotateX(-45deg) translateZ(7vw);
+    }
+
+    .pTop
+    {
+        transform: rotateX(45deg) translateZ(7vw);
+    }
+
+    .pRight
+    {
+        transform: rotateY(14deg) translateX(8vw) translateZ(7vw);
+    }
+
+    .pLeft
+    {
+        transform: rotateY(-14deg) translateX(-8vw) translateZ(7vw);
+    }
+
+    .menuRing
+    {
+        position: absolute;
+        
+        background:blue;
+        padding:1vw;
+
+    }
     .menu>li
     {
         display: inline-block;
