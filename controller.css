@@ -2,8 +2,23 @@
 {
     position: absolute;
     transform-style: preserve-3d;
-    transform: rotateX(67deg) rotateZ(44deg);
-    top: 10vw;
-    left: 40vw;
+    transform: rotateX(0deg) rotateZ(0deg);
+    top: 13vw;
+    left: 24vw;
     transition: ease-in 0.5s;
+    animation: introDrop 4s ease-out;
 }
+
+
+
+@keyframes introDrop
+        {
+            0%{transform: rotateX(90deg);
+               top: -20vw;
+            }
+           
+            100%{transform: rotateX(0deg);
+                top: 13vw;
+             }
+        }
+

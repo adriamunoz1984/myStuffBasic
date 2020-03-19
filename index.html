@@ -4,8 +4,13 @@
         <title></title>
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="controller.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="script.js"></script>
+
     </head>
     <!-- NINTENDO Controller Menu -->
 <!-- most classes are paired with a unit class to design grouped items first then individually-->
@@ -13,133 +18,23 @@
 <!-- Most objets are set to absolute and positioned into place. the 'vw' units keep everything aligned-->
 
     <style>
-        .menuRing
-        {
-            position:absolute;
-           
-            height:4vw;
-            width:52vw;
-            background: #cecfcf;
-            
-        }
-        .controller-wrap
-        {
-            perspective-origin: 50% 50%;
-            perspective:200vw;
-        }
-        .edge_one
-        {
-            transform: rotateX(90deg) translateY(-2vw) translateZ(1.9vw);
-        }
-        .edge_two
-        {
-            transform: rotateX(90deg) translateY(-1.9vw) translateZ(-25.25vw);
-        }
 
-        .edge_three
-        {
-            transform: rotateY(90deg) rotate(90deg) translateY(-1.9vw) translateZ(-13.5vw) translateX(11.6vw);
-           
-            width: 27vw;
-        }
-        .edge_four
-        {
-            transform: rotateY(90deg) rotate(90deg) translateY(-1.9vw) translateZ(38.5vw) translateX(11.6vw);
-            width: 27vw;
-        }
-
-        .edge_five
-        {
-            transform: rotateY(90deg) rotateY(90deg) translateY(-0.2vw) translateZ(3.5vw) translateX(0vw);
-            width: 50.2vw;
-            height: 27vw;
-        }
-        .cam-persp
-        {
-            position:relative;
-            perspective: 300vw;
-            perspective-origin: 50% 50%;
-            left:10vw;
-            /* bottom:10vw; */
-            
-        }
-
-        .persp
-        {
-            position:absolute;
-            height: 5vw;
-            width: 8vw;
-            color: black;
-            background: red;
-            display: inline-block;
-            border-style: none;
-            transition: ease-in-out;
-        }
-
-        
-        .perp-rotate
-        {
-            transform-style: preserve-3d;
-            transform: rotateY(0deg) rotateX(0deg) translateX(0vw);
-            /* left: 40vw; */
-            position: relative;
-            transition:ease-in 0.5s;
-        }
-        .pFront
-        {
-            transform:translateZ(5vw);
-        }
-
-        .pBack
-        {  
-            transform: translateZ(-5vw);
-        }
-        .pDown
-        {
-            transform: rotateX(-45deg) translateZ(7vw);
-        }
-
-        .pTop
-        {
-            transform: rotateX(45deg) translateZ(7vw);
-        }
-
-        .pRight
-        {
-            transform: rotateY(14deg) translateX(8vw) translateZ(7vw);
-        }
-
-        .pLeft
-        {
-            transform: rotateY(-14deg) translateX(-8vw) translateZ(7vw);
-        }
-
-        .menuRing
-        {
-            position: absolute;
-            
-            background:blue;
-            padding:1vw;
-
-        }
-    
+    .startLetters 
+    {
+        position: absolute;
+        top: 83%;
+        left: 35%;
+        font-size: 5vw;
+        font-weight: 800;
+    }
     </style>
     <body>
         
 <!-- NINTENDO Controller Menu -->
 <!-- most classes are paired with a unit class to design grouped items first then individually-->
 <!-- all messurements are set to 'vw' for better responsive dsign-->
-<!-- Most objets are set to absolute and positioned into place. the 'vw' units keep everything aligned-->
-<div class="menuRing">
-    <ul class="menu">
-        <li class="menLi"><a href="shadowTest.html">ShadowTest</a></li>
-        <li class= "menLi"><a href="">option 2</a></li>
-        <li class="menLi"><a href="">option 3</a></li>
-        <li class="menLi"><a href="">option 4</a></li>
-    </ul>
-</div>
+<!-- Most objects are set to absolute and positioned into place. the 'vw' units keep everything aligned-->
 
-<<<<<<< HEAD
     <ul class="menu">
         <li class="menLi"><a href="index.html">Nintendo</a></li>
         <li class="menLi"><a href="shadowTest.html">Shadow Test</a></li>
@@ -147,15 +42,13 @@
         <li class="menLi"><a href="parallaxTest.html">Mars Parallax</a></li>
     </ul>
 
-
+    
 <div class="controller-wrap">
-=======
->>>>>>> gh-pages
     <div class="controllerMenu">
         <!-- Section of the controller leading to the cord-->
-        <div class="dents dentOne"></div>
+        <!-- <div class="dents dentOne"></div>
         <div class="dents dentTwo"></div>
-        <div class="dents dentThree"></div>
+        <div class="dents dentThree"></div> -->
     
         <button class="dClick dTop"></button>
         <button class="dClick dLft"></button>
@@ -197,8 +90,8 @@
                         </div>
                         <div class="out-st-slct">
                             <div class="innr-srt-slct">
-                                <div class="startBut cntrButtns"></div>
-                                <div class="slctBut cntrButtns"></div>
+                                <button class="startBut cntrButtns"></button>
+                                <button class="slctBut cntrButtns"></button>
                             </div>
                         </div>
                     
@@ -222,24 +115,70 @@
                 </div>
             </div>
         </div>
-        <div class="menuText">
+        <!-- <div class="menuText">
             <div class="textGroupOne textGroup">
                 
             </div>
             <div class="textGroupTwo textGroup"></div>
             <div class="textGroupThree textGroup"></div>
-        </div>
+        </div> -->
 
         <div class="edges edge_one"></div>
         <div class="edges edge_two"></div>
         <div class="edges edge_three"></div>
         <div class="edges edge_four"></div>
-        <div class="edges edge_five"></div>
+        <div class="edges edge_five">
+            <section class="workExp">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">Conctruction</a></li>
+                    <li><a data-toggle="tab" href="#menu2">EMT</a></li>
+                    <li><a data-toggle="tab" href="#menu3">QA Analyst</a></li>
+                    <li><a data-toggle="tab" href="#menu4">Developer</a></li>
+                    <li><a data-toggle="tab" href="#menu5">Tool Analyst</a></li>
+                    <li><a data-toggle="tab" href="#menu6">3D Print</a></li>
+                    <li><a data-toggle="tab" href="#menu7">Astronaut</a></li>
+                  </ul>
+                
+                  <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                      <h3>Conctruction</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                      <h3>EMT</h3>
+                      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                      <h3>QA Analyst</h3>
+                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                    <div id="menu4" class="tab-pane fade">
+                      <h3>Developer</h3>
+                      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    </div>
+                    <div id="menu5" class="tab-pane fade">
+                        <h3>Tool Analyst</h3>
+                        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                      </div>
+                      <div id="menu6" class="tab-pane fade">
+                        <h3>3D Print</h3>
+                        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                      </div>
+
+                      <div id="menu7" class="tab-pane fade">
+                        <h3>Astronaut</h3>
+                        <p>No, not really but imagine.</p>
+                      </div>
+                  </div>
+                </div>
+            </section>
+        </div>
 
     </div>
+    <h1 class="startLetters">Press Start</h1>
     
 </div>
-    <div class="menuRing">
+    <!-- <div class="menuRing">
         <div class="cam-persp">
             <div class="perp-rotate">
                 <button class="persp pFront">Front</button>
@@ -250,42 +189,22 @@
                 <button class="persp pDown">Down</button>
             </div>
         </div>
-    </div>
+    </div> -->
    <script>
-       var leftRIght = 5;
-       var upDown = 5;
-       var incVal = 5;
+       var letters = $(".startLetters");
+       var controller = $(".controllerMenu");
+       var edge = $(".edge_five");
+        
+        
 
-       
-       $(".pFront").click(function(){
-        $(".controllerMenu").css({"transform":"rotateX(0deg) rotateZ(0deg)","left":"45vw"});
-        // $(".perp-rotate").css({"transform":"rotateY(0deg) rotateX(0deg)"});
-       });
-       $(".pRight").click(function(){
-        $(".controllerMenu").css({"transform":"rotateY(-"+(leftRIght+=incVal)+"deg) rotateZ(0deg)"});
-        // $(".perp-rotate").css({"transform":"rotateY(-"+(leftRIght++)+"deg) rotateX(0deg)"});
-       });
-       $(".pBack").click(function(){
-        $(".controllerMenu").css({"transform":"rotateY("+(leftRIght+=incVal)+"deg) rotateZ(0deg)"});
-        // $(".perp-rotate").css({"transform":"rotateY("+(leftRIght++)+"deg) rotateX(0deg)"});
 
-       });
-       
-       $(".pLeft").click(function(){
-        $(".controllerMenu").css({"transform":"rotateY("+(leftRIght+=incVal)+"deg) rotateZ(0deg)"});
-        // $(".perp-rotate").css({"transform":"rotateY("+(moveUnit++)+"deg) rotateX(0deg)"});
-       });
-       $(".pTop").click(function(){
-        $(".controllerMenu").css({"transform":"rotateX("+(upDown+=incVal)+"deg) rotateZ(0deg)"});
-        // $(".perp-rotate").css({"transform":"rotateX("+(moveUnit++)+"deg) rotateX(0deg)"});
-
-       });
-       $(".pDown").click(function(){
-        $(".controllerMenu").css({"transform":"rotateX(-"+(upDown+=incVal)+"deg) rotateZ(0deg)"});
-        // $(".perp-rotate").css({"transform":"rotateX(-"+(upDown++)+"deg) rotateX(0deg)"});
-
-       });
-
+      $(".slctBut").click(function()
+      {
+         controller.css({"transform": "rotateY(180deg)","left":"30vw"});
+    
+        edge.css({"display":"block","transform" : "rotateY(90deg) rotateY(90deg) translateY(-2vw) translateZ(9.5vw) translateX(3vw)","z-index":"5"});
+        $(".startLetters").css({"display":"none"});
+      });
 //pATENT SEARCH GUY
     //    STEVEN ZASLOW 
     //    202-413-0012

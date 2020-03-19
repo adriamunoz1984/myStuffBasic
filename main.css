@@ -4,18 +4,14 @@
         margin:0;
         padding:0;
         overflow-x:hidden;
-        background:black;
+        background:brown;
     }
+
     .menu
     {
-<<<<<<< HEAD
-        position: relative;
+        position: absolute;
         z-index:10;
         left:35vw;
-=======
-        position: relative;;
-      
->>>>>>> gh-pages
     }
 
     .menuRing
@@ -32,6 +28,12 @@
         perspective-origin: 50% 50%;
         perspective:200vw;
     }
+
+    .edges
+    {
+        background:#fff;
+    }
+
     .edge_one
     {
         transform: rotateX(90deg) translateY(-2vw) translateZ(1.9vw);
@@ -55,10 +57,27 @@
 
     .edge_five
     {
-        transform: rotateY(90deg) rotateY(90deg) translateY(-0.2vw) translateZ(3.5vw) translateX(0vw);
-        width: 50.2vw;
-        height: 27vw;
+        position: relative;
+        transform: rotateY(90deg) rotateY(90deg) translateY(1vw) translateZ(9.5vw) translateX(-1vw);
+        width: 60vw;
+        height: 30vw;
+        display:none;
+        transition:  ease-in 5s;
     }
+    
+    .workExp .tab-content
+    {
+        padding:1vw;
+    }
+
+    .workExp ul li:first-child a,
+    .workExp ul li:first-child
+    {
+        border-radius: 2vw 0vw 0vw 0vw;
+    }
+
+
+    
     .cam-persp
     {
         position:relative;
@@ -119,13 +138,18 @@
         transform: rotateY(-14deg) translateX(-8vw) translateZ(7vw);
     }
 
-    .menuRing
+    /* .menuRing
     {
         position: absolute;
-        
-        background:blue;
-        padding:1vw;
+        background: blue;
+        padding: 1vw;
+        width: auto;
 
+    } */
+
+    .menu
+    {
+        margin: 0 auto;
     }
     .menu>li
     {
@@ -173,13 +197,22 @@
         width:32.9%;
         /* outline:2px solid red; */
         height:100%;
+        
     }
 
-    .d-pad-wrapper
+    .d-pad.conColumn
     {
         position: relative;
         bottom:3vw;
+        transform:translateZ(0vw);
+        animation: introDpad 5s ease-out;
     }
+
+    /* .start-select.conColumn
+    {
+        transform:translateZ(0vw);
+        animation: introStart 5s ease-out;
+    } */
 
     .d-hor
     {
@@ -290,6 +323,7 @@
         margin-right:0.5vw;
         margin-left :0.5vw;
         display: inline-block;
+        border-style: none;
         z-index:4;
         width:5vw;
         height:2vw;
@@ -299,6 +333,7 @@
         /* outline:red; */
     }
 
+    
     .startBut
     {
         left:8vw;
@@ -374,11 +409,11 @@
 
     .ptrnThree .lblStrt
     {
-       left:26.5vw;
+       left:1.25vw;
     }
     .ptrnThree .lblSlct
     {
-       left:17.5vw;
+       left:9vw;
     }
     
      .butts{
@@ -395,8 +430,73 @@
      .buttonA
      {
          left:42vw;
+         transform: translateZ(0vw);
+         animation: aButt 5s ease-out;
 
      }
+
+    
+
+     .buttonB {
+        
+        transform: translateZ(0vw);
+        animation: bButt 5s ease-out;
+    }
+
+    .ptrnOne
+    {
+        transform: translateZ(0vw);
+       
+        animation: ptrnOne 5s ease-out;
+    }
+    .ptrnTwo
+    {
+        transform: translateZ(0vw);
+        animation: ptrnOne 4s ease-out;
+    }
+    .ptrnThree
+    {
+        transform: translateZ(0vw);
+        animation: ptrnOne 3s ease-out;
+    }
+    .ptrnFour
+    {
+        transform: translateZ(0vw);
+        animation: ptrnOne 2s ease-out;
+    }
+    .ptrnFive
+    {
+        transform: translateZ(0vw);
+        animation: ptrnOne 1s ease-out;
+    }
+
+    .innr-srt-slct
+    {
+        transform: translateZ(0vw);
+        animation: ptrnOne 3s ease-out;
+    }
+    .out-st-slct
+    {
+        transform: translateZ(0vw);
+        animation: ptrnOne 5s ease-out;
+    }
+
+    @keyframes ptrnOne
+    {
+        0%{transform:translateZ(10vw)}
+        100%{transform:translateZ(0vw)}
+    }
+    
+    @keyframes aButt
+    {
+        0%{transform:translateZ(10vw) translateX(10vw)}
+        100%{transform:translateZ(0vw) translateX(0vw)}
+    }
+    @keyframes bButt
+    {
+        0%{transform:translateZ(10vw) translateX(-10vw)}
+        100%{transform:translateZ(0vw) translateX(0vw)}
+    }
      .redButt
      {
          width:5vw;
@@ -467,7 +567,7 @@
     background:#cecfcf; 
 }
 
-.dClick:hover
+    .dClick:hover
     {
        
         cursor: pointer;
@@ -479,7 +579,7 @@
         z-index:6;
         width:52vw;
         height:27.5vw;
-        display:inline-block;
+        display:none;
         /* outline:2px solid red; */
     }
 
@@ -525,5 +625,40 @@
         width:5vw;
         height:3.5vw;
     }
+
+@keyframes introDpad
+{
+    0%{transform:translateZ(10vw);
+        left: -20vw;
+     }
+    
+     100%{transform:translateZ(0vw);
+         left: 0vw;
+      }
+}
+
+@keyframes introMid
+{
+    0%{transform:translateZ(10vw);
+        left: -20vw;
+     }
+    
+     100%{transform:translateZ(0vw);
+         left: 0vw;
+      }
+}
+@keyframes introStart
+{
+    0%{
+        left: -20vw;
+     }
+    
+     100%{
+         left: 0vw;
+      }
+}
+
+
+
 
 
